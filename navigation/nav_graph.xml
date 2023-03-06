@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MPFragment">
+
+    <fragment
+        android:id="@+id/MPFragment"
+        android:name="com.example.scarlettpizza.MainPageFragment"
+        android:label="@string/scarlet_pizza"
+        tools:layout="@layout/fragment_main_page">
+
+        <action
+            android:id="@+id/action_MPFragment_to_NYStyleFragment"
+            app:destination="@id/NYStyleFragment" />
+        <action
+            android:id="@+id/action_MPFragment_to_ChicagoStyleFragment"
+            app:destination="@id/ChicagoStyleFragment" />
+        <action
+            android:id="@+id/action_MPFragment_to_CurrentOrderFragment"
+            app:destination="@id/CurrentOrderFragment" />
+        <action
+            android:id="@+id/action_MPFragment_to_StoreOrdersFragment"
+            app:destination="@id/StoreOrdersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/NYStyleFragment"
+        android:name="com.example.scarlettpizza.NYStyleFragment"
+        android:label="@string/ny_syle_pizza"
+        tools:layout="@layout/fragment_nystyle">
+        <action
+            android:id="@+id/action_NYStyleFragment_to_ToppingsFragment"
+            app:destination="@id/ToppingsFragment" />
+        <action
+            android:id="@+id/action_NYSTyleFragment_to_MPFragment"
+            app:destination="@id/MPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ChicagoStyleFragment"
+        android:name="com.example.scarlettpizza.ChicagoStyleFragment"
+        android:label="@string/chicago_style_pizza"
+        tools:layout="@layout/fragment_chicagostyle">
+        <action
+            android:id="@+id/action_ChicagoStyleFragment_to_ToppingsFragment"
+            app:destination="@id/ToppingsFragment" />
+        <action
+            android:id="@+id/action_ChicagoSTyleFragment_to_MPFragment"
+            app:destination="@id/MPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CurrentOrderFragment"
+        android:name="com.example.scarlettpizza.CurrentOrderFragment"
+        android:label="@string/current_order"
+        tools:layout="@layout/fragment_current_order">
+
+        <action
+            android:id="@+id/action_CurrentOrderFragment_to_MPFragment"
+            app:destination="@id/MPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/StoreOrdersFragment"
+        android:name="com.example.scarlettpizza.StoreOrdersFragment"
+        android:label="@string/store_orders"
+        tools:layout="@layout/fragment_store_orders">
+
+        <action
+            android:id="@+id/action_StoreOrdersFragment_to_MPFragment"
+            app:destination="@id/MPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ToppingsFragment"
+        android:name="com.example.scarlettpizza.ToppingsFragment"
+        android:label="@string/toppings"
+        tools:layout="@layout/fragment_toppings">
+
+        <action
+            android:id="@+id/action_ToppingsFragment_to_NYStyleFragment"
+            app:destination="@id/NYStyleFragment" />
+        <action
+            android:id="@+id/action_ToppingsFragment_to_ChicagoStyleFragment"
+            app:destination="@id/ChicagoStyleFragment" />
+    </fragment>
+</navigation>
